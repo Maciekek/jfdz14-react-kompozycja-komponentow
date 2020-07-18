@@ -1,0 +1,44 @@
+.tabs {
+  padding: 20px;
+}
+
+.app_title {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tab:after {
+  padding: 0 30px;
+  content: "|";
+  color: black;
+
+}
+
+.tab--active {
+  color: blue;
+}
+
+
+.page {
+  margin: 60px;
+  background-color: aliceblue;
+  height: 400px;
+}
+
+.page > div {
+  padding: 10px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.completed {
+  background-color: red;
+}
+
+label {
+  display: block;
+}
