@@ -18,10 +18,10 @@ class LifeCycle extends React.Component {
     console.log("MOUNTED")
   }
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(prevProps, prevState ) {
     console.log('SHOULD COMPONENT UPDATE')
 
-    return true;
+    return false;
   }
 
   onButtonClicked = () => {
@@ -32,7 +32,12 @@ class LifeCycle extends React.Component {
     });
   };
 
+  componentDidUpdate() {
+    console.log('DID update')
+  }
+
   render() {
+    console.log("RENDER")
     return (
       <PageContent>
         <div>

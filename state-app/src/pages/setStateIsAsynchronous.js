@@ -14,12 +14,16 @@ class SetState extends React.Component {
 
     this.setState({
       hello: "Jakis nowy stan"
+    }, () => {
+      console.log(18, "New state? ", this.state.hello);
     });
 
-    console.log(19, "New state? ", this.state.hello);
+
+    console.log(23, "New state? ", this.state.hello);
   };
 
   render() {
+    console.log('render')
     return (
       <PageContent>
         <div>
@@ -27,7 +31,9 @@ class SetState extends React.Component {
 
           <p>Przejdz do kodu, aby zobaczyc co tu we mnie gra  👀</p>
 
-          <button onClick={this.onButtonClicked}>Kliknij mnie!</button>
+          <button onClick={this.onButtonClicked}>
+            Kliknij mnie!
+          </button>
 
         </div>
       </PageContent>

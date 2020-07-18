@@ -12,14 +12,19 @@ class HandleEvents extends React.Component {
       <PageContent>
         <div>
           Hejo!
-          <p>Witaj w następnej sekcji. Tutaj nauczymy się jak reagowac na zdarzenia takie jak klikniecie przycisku.</p>
+          <p>Witaj w następnej sekcji. Tutaj nauczymy się jak reagowac na
+            zdarzenia takie jak klikniecie przycisku.</p>
           <p>Kliknij poniższy przycisk i zobacz czy coś sie stanie 🔥</p>
-
 
           <p>
             <div onMouseEnter={this.onClickHandler}>Kliknij mnie 😎</div>
 
-            <button onClick={this.onClickHandler}>Kliknij mnie 😎</button>
+            <button
+              onMouseEnter={this.onClickHandler}
+              onClick={this.onClickHandler}
+            >
+              Kliknij mnie 😎
+            </button>
           </p>
 
         </div>

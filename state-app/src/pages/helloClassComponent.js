@@ -2,27 +2,41 @@ import React from 'react';
 import PageContent from "../components/PageContent";
 import {NavLink} from "react-router-dom";
 
+
+
+
 class HelloClassComponent extends React.Component {
 
-  state = {
-    hello: "Cześć, jestem inicjalnym statem tego komponentu. Zawsze na początku będę miał taki sam stan! " +
-      "Pamietaj, że stan możesz zainicjalizować w taki sposób jak teraz, lub z użyciem contructora",
-    name: "1",
-  };
+  // state = {
+  //   hello: "Cześć, jestem inicjalnym statem tego komponentu. Zawsze na początku będę miał taki sam stan! " +
+  //     "Pamietaj, że stan możesz zainicjalizować w taki sposób jak teraz, lub z użyciem constructora",
+  //   name: "1",
+  // };
+
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hello: "hello from constructor"
+    }
+  }
+
 
   render() {
     return (
       <PageContent>
         <div>
-          <p>Cześć, Jestem komponentem klasowym. To znaczy, że zostałem stworzony z użyciem klasy, która dziedziczy po <span>React.Component</span> </p>
+          <p>Cześć, Jestem komponentem klasowym. To znaczy, że zostałem stworzony z użyciem klasy,
+            która dziedziczy po <span>React.Component</span> </p>
 
           <p>Ale dlaczego inni mówią, że jestem "smart"?  🤔</p>
 
           <ul>
-            <li> 🤔 Mam możliwość zadeklarowania swojej pamięci, do której będę miał dostęp. Będę mógł zapisać tam wartości zmiennych jak i odczytać z tej pamięci dane</li>
+            <li> 🤔 Mam możliwość zadeklarowania swojej pamięci, do której będę miał dostęp.
+              Będę mógł zapisać tam wartości zmiennych jak i odczytać z tej pamięci dane</li>
             <li> 🤔 Mam też dostęp do metod cykly mojego życia, jednak o tym opowiem ci później 🥰 </li>
           </ul>
-
 
           <br/>
           <p>

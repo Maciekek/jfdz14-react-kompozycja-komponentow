@@ -7,6 +7,13 @@ class HandleInputEvents extends React.Component {
     checked: false
   };
 
+  keyUpHandler = (event) => {
+    console.log(event.target.value);
+
+    this.setState({
+      yourName: event.target.value
+    })
+  }
 
   render() {
     return (
@@ -14,7 +21,7 @@ class HandleInputEvents extends React.Component {
         <div>
          <p>Spraw, aby komponent się z Tobą przywitał:) zajrzyj w kod...</p>
 
-          <input type="text" placeholder={"Podaj swoje imie..."}/>
+          <input type="text" onChange={this.keyUpHandler} placeholder={"Podaj swoje imie..."}/>
 
           <p>
             {this.state.yourName.length > 0
